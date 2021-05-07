@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import SearchForm from "../SearchForm";
 import API from "../../utils/API";
-
+import Table from "../Table";
 
 
 class Search extends Component {
@@ -35,6 +35,9 @@ class Search extends Component {
                 <div className="row justify-content-center">
                     <SearchForm
                         handleInputChange={this.handleInputChange}
+                    />
+                    <Table
+                        searchResults={this.state.results}    
                     />
                 </div>
                
