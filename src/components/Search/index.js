@@ -41,7 +41,7 @@ class Search extends Component {
             
         }
     }
-    
+    // Sort column alphabetically by Last Name
     sortBy = () => {
         
     

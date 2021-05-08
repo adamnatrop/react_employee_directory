@@ -1,6 +1,8 @@
 import React from "react";
 import "./style.css";
 
+
+// Uses results from state to display each employee in a row of the directory table
 function SearchResults(props) {
 
     return (

@@ -1,6 +1,8 @@
 import React from "react";
 import "./style.css"
 
+
+// Input form for sorting by name
 function SearchForm(props){
 
 
