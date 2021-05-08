@@ -9,7 +9,7 @@ function Table(props) {
                 <thead>
                     <tr>
                     <th scope="col">Image</th>
-                    <th scope="col">Name</th>
+                    <th scope="col" className="sortByName" onClick={() => props.sortBy()} >Name <i className="fas fa-arrow-left"></i></th>
                     <th scope="col">Phone</th>
                     <th scope="col">Email</th>
                     <th scope="col">DOB</th>
