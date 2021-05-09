@@ -13,7 +13,7 @@ function SearchResults(props) {
                     <td><img src={result.picture.thumbnail} alt={result.gender}/></td>
                     <td>{result.name.first} {result.name.last}</td>
                     <td>{result.phone}</td>
-                    <td>mailto:{result.email}</td>
+                    <td><a href={`mailto:${result.email}`} target='blank'>{result.email}</a></td>
                     <td>{moment(result.dob.date).format("L")}</td>
                 </tr>
             ))}
