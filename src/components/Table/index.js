@@ -6,8 +6,8 @@ import SearchResults from "../SearchResults"
 // Creates Table to display Employees
 function Table(props) {
     return (
-        <div className="container">
-            <table className="table table-striped table-hover">
+        <div className="container table-responsive">
+            <table className="table table-striped table-hover ">
                 <thead>
                     <tr>
                     <th scope="col">Image</th>
