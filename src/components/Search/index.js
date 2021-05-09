@@ -9,6 +9,7 @@ class Search extends Component {
         search: "",
         results: [],
         sortResults: [],
+        order: "",
         error: ""
     };
 
@@ -44,15 +45,31 @@ class Search extends Component {
     // Sort column alphabetically by Last Name
     sortBy = () => {
         
+        if (this.state.order === "" || this.state.order === "descending") {
+            this.setState({ order: "ascending"})
     
+            const sorted = this.state.results.sort(function(a, b){
+                let x = a.name.last.toLowerCase();
+                let y = b.name.last.toLowerCase();
+                if (x < y) { return -1; };
+                
+                return 0;
+        })
+        this.setState({sortResults: sorted});
+
+    } else if (this.state.order === "ascending"){
+        this.setState({ order: "descending"})
+        
         const sorted = this.state.results.sort(function(a, b){
-            var x = a.name.last.toLowerCase();
-            var y = b.name.last.toLowerCase();
-            if(x < y) { return -1; };
-            if(x > y) { return 1; };
+            let x = a.name.last.toLowerCase();
+            let y = b.name.last.toLowerCase();
+            
+            if (x > y) { return -1; };
             return 0;
         })
         this.setState({sortResults: sorted});
+
+    }
     }
 
     render() {
